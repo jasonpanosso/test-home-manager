@@ -6,6 +6,7 @@
     ./plugins/colorscheme
     ./plugins/alpha.nix
     ./plugins/lualine
+    ./plugins/gitsigns.nix
   ];
 
   home.sessionVariables = {
