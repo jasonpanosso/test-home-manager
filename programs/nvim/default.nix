@@ -4,6 +4,7 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./plugins/colorscheme
+    ./plugins/alpha.nix
   ];
 
   home.sessionVariables = {
