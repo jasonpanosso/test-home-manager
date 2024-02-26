@@ -1,12 +1,10 @@
 { ... }:
 
 {
-  programs.nixvim = {
-    plugins.indent-blankline = {
-      enable = true;
-      exclude = {
-        buftypes = [ "terminal" "nofile" "prompt" ];
-      };
+  programs.nixvim.indent-blankline = {
+    enable = true;
+    exclude = {
+      buftypes = [ "terminal" "nofile" "prompt" ];
     };
   };
 }
