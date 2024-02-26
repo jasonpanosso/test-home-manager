@@ -12,6 +12,7 @@
     ./plugins/oil.nix
     ./plugins/auto-hlsearch.nix
     ./plugins/colorizer.nix
+    ./plugins/undotree.nix
   ];
 
   home.sessionVariables = {
