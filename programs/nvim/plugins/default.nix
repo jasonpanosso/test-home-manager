@@ -15,6 +15,6 @@
     ./lazygit.nix
     ./glow.nix
     ./autopairs.nix
-
+    ./lint.nix
   ];
 }
