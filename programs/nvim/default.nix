@@ -15,6 +15,7 @@
     ./plugins/undotree.nix
     ./plugins/tmux-navigator.nix
     ./plugins/lazygit.nix
+    ./plugins/glow.nix
   ];
 
   home.sessionVariables = {
