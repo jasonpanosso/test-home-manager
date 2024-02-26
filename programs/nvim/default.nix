@@ -3,8 +3,8 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ./plugins/neodev.nix
     ./lsp
+    ./plugins/neodev.nix
     ./plugins/colorscheme
     ./plugins/alpha.nix
     ./plugins/lualine
@@ -13,6 +13,7 @@
     ./plugins/auto-hlsearch.nix
     ./plugins/colorizer.nix
     ./plugins/undotree.nix
+    ./plugins/tmux-navigator.nix
   ];
 
   home.sessionVariables = {
