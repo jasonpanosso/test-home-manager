@@ -7,6 +7,7 @@
     ./plugins/alpha.nix
     ./plugins/lualine
     ./plugins/gitsigns.nix
+    ./plugins/oil.nix
   ];
 
   home.sessionVariables = {
@@ -18,5 +19,6 @@
     enable = true;
     viAlias = true;
     package = pkgs.neovim-nightly;
+    globals.mapleader = " ";
   };
 }
