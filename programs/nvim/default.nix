@@ -10,6 +10,7 @@
     ./plugins/lualine
     ./plugins/gitsigns.nix
     ./plugins/oil.nix
+    ./plugins/auto-hlsearch.nix
   ];
 
   home.sessionVariables = {
