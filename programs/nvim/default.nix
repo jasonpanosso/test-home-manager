@@ -11,6 +11,7 @@
     ./plugins/gitsigns.nix
     ./plugins/oil.nix
     ./plugins/auto-hlsearch.nix
+    ./plugins/colorizer.nix
   ];
 
   home.sessionVariables = {
