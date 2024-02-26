@@ -5,6 +5,7 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./plugins/colorscheme
     ./plugins/alpha.nix
+    ./plugins/lualine
   ];
 
   home.sessionVariables = {
