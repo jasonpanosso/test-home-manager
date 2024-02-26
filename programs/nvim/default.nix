@@ -16,6 +16,7 @@
     ./plugins/tmux-navigator.nix
     ./plugins/lazygit.nix
     ./plugins/glow.nix
+    ./plugins/autopairs.nix
   ];
 
   home.sessionVariables = {
