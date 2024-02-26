@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   nova = pkgs.tmuxPlugins.mkTmuxPlugin
@@ -23,10 +23,9 @@ in
   home.file = {
     ".config/tms/config.toml".text = ''
       [[search_dirs]]
-      path = '~/Projects'
+      path = '${config.home.homeDirectory}/Projects'
       depth = 1
     '';
-
   };
 
   programs.tmux = {
