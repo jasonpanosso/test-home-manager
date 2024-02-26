@@ -5,6 +5,7 @@
     ./programs/shell.nix
     ./programs/tmux
     ./programs/kitty.nix
+    ./programs/nvim
   ];
 
   home.username = "jason";

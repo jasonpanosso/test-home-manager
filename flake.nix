@@ -8,24 +8,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, neovim-nightly-overlay, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [
-        inputs.neovim-nightly-overlay.overlay
-      ];
+      pkgs = nixpkgs.legacyPackages.${system} // {
+        overlays = [ neovim-nightly-overlay.overlay ];
+      };
     in
     {
       homeConfigurations."jason" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        configuration = { pkgs, ... }:
-          {
-            nixpkgs.overlays = overlays;
-          };
         modules = [ ./home.nix ];
+        extraSpecialArgs = { inherit inputs; };
       };
     };
 }
