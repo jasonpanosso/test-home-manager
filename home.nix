@@ -106,7 +106,6 @@
   home.sessionVariables = {
     DOTNET_ROOT = "/usr/lib/dotnet";
     WINEESYNC = 1;
-
     PATH = ''
       $HOME/.cargo/bin:\
       $HOME/.local/bin:\
@@ -114,19 +113,11 @@
       /usr/local/bin:\
       /usr/sbin:\
       /usr/bin:\
-      /sbin:/bin:\
-      /usr/games:\
-      /usr/local/games:\
+      /sbin:\
+      /bin:\
       /snap/bin:\
-      $HOME/.dotnet/tools:\
-      $HOME/.tmux/plugins/tmux-open-nvim/scripts:\
-      $HOME/.local/share/bob/nvim-bin:\
-      $HOME/.local/share/pnpm:\
-      $HOME/.jenv/bin:\
-      $HOME/.local/share/coursier/bin:\
       /usr/local/go:\
       /usr/local/go/bin:\
-      /nix/var/nix/profiles/default/bin
     '';
   };
 
