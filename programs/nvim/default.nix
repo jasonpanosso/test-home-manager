@@ -3,6 +3,8 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./plugins/neodev.nix
+    ./lsp
     ./plugins/colorscheme
     ./plugins/alpha.nix
     ./plugins/lualine
