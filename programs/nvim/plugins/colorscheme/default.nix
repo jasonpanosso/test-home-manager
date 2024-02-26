@@ -1,7 +1,5 @@
 { ... }:
 
 {
-  programs.nixvim = {
-    colorschemes.kanagawa.enable = true;
-  };
+  imports = [ ./kanagawa.nix ];
 }
