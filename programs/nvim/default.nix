@@ -3,6 +3,7 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./options.nix
     ./lsp
     ./plugins
     ./general-keymaps.nix
