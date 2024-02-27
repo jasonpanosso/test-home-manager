@@ -21,5 +21,6 @@
     ./treesitter
     ./conform
     ./harpoon
+    ./indent-blankline.nix
   ];
 }
