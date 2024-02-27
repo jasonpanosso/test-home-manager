@@ -1,11 +1,17 @@
 {
   programs.nixvim.plugins.lsp = {
     enable = true;
+    capabilities = #lua
+      ''
+        require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+      '';
   };
 
   imports = [
+    ./fidget.nix
     ./inlayhints
     ./lspsaga
+    ./servers
   ];
 
   programs.nixvim.keymaps = [

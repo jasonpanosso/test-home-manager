@@ -1,8 +1,5 @@
 vim.opts
 
-formatter
-fidget
-lsp servers
 typescript-tools
 rustaceanvim
 roslyn
