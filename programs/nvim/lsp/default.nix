@@ -14,6 +14,7 @@
     ./servers
     ./rustaceanvim.nix
     ./typescript-tools.nix
+    ./roslyn.nix
   ];
 
   programs.nixvim.keymaps = [

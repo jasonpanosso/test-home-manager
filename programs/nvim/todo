@@ -1,10 +1,5 @@
-vim.opts
-
-roslyn
-harpoon
-
-eventually:
-  actions-preview
-  dap
-  neotest
-  rest
+plugins:
+1. actions-preview
+2. dap
+3. neotest
+4. rest
