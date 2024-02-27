@@ -149,6 +149,7 @@
         desc = "LSP: Keep Hover Documentation";
       };
     }
+
     {
       mode = [ "n" ];
       key = "K";
