@@ -123,7 +123,7 @@
 
       {
         mode = [ "n" ];
-        key = "<leader>gr";
+        key = "gr";
         action = "require('telescope.builtin').lsp_references";
         lua = true;
         options = {
@@ -134,7 +134,7 @@
 
       {
         mode = [ "n" ];
-        key = "<leader>gi";
+        key = "gi";
         action = "require('telescope.builtin').lsp_implementations";
         lua = true;
         options = {

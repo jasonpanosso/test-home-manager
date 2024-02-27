@@ -52,7 +52,7 @@
 
     {
       mode = [ "n" ];
-      key = "<leader>gh";
+      key = "gh";
       action = "<cmd>Lspsaga lsp_finder<CR>";
       options = {
         silent = true;
@@ -62,7 +62,7 @@
 
     {
       mode = [ "n" ];
-      key = "<leader>gd";
+      key = "gd";
       action = "<cmd>Lspsaga goto_definition<CR>";
       options = {
         silent = true;
@@ -72,7 +72,7 @@
 
     {
       mode = [ "n" ];
-      key = "<leader>gt";
+      key = "gt";
       action = "<cmd>Lspsaga goto_type_definition<CR>";
       options = {
         silent = true;
