@@ -12,6 +12,19 @@
       lspkind-nvim
     ];
 
+    keymaps = [
+      {
+        mode = [ "i" "s" ];
+        key = "<C-L>";
+        action = "<cmd>lua require('luasnip').jump(1)<CR>";
+        options = {
+          silent = true;
+          desc = "Next snippet";
+        };
+      }
+
+    ];
+
     extraConfigLua = builtins.readFile ./nvim-cmp.lua + builtins.readFile ./luasnip.lua;
   };
 }
