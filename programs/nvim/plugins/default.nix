@@ -18,5 +18,7 @@
     ./lint.nix
     ./cmp
     ./telescope
+    ./comment.nix
+    ./sleuth.nix
   ];
 }
