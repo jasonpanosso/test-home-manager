@@ -9,6 +9,7 @@
       sqlfluff
       ansible-lint
       djlint
+      golangci-lint
     ];
 
     plugins.lint = {
@@ -22,6 +23,7 @@
         yml = [ "ansible_lint" ];
         yaml = [ "ansible_lint" ];
         htmldjango = [ "djlint" ];
+        go = [ "golangcilint" ];
       };
     };
   };
