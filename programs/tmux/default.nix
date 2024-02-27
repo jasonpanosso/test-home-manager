@@ -21,6 +21,7 @@ in
     ];
 
   home.file = {
+    # setup tmux-sessionizer config
     ".config/tms/config.toml".text = ''
       [[search_dirs]]
       path = '${config.home.homeDirectory}/Projects'
@@ -75,6 +76,12 @@ in
         plugin = tmuxPlugins.resurrect;
         extraConfig = ''
           set -g @resurrect-capture-pane-contents 'on'
+
+          resurrect_dir="$HOME/.tmux/resurrect"
+          set -g @resurrect-dir $resurrect_dir
+
+          # cursed fix for .nix-profile
+          set -g @resurrect-hook-post-save-all 'target=$(readlink -f $resurrect_dir/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/home/$USER/.nix-profile/bin/||g" $target | sponge $target'
         '';
       }
       {
