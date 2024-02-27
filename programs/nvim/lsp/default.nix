@@ -22,6 +22,15 @@
     }
 
     {
+      mode = [ "n" "v" ];
+      key = "<leader>lr";
+      action = "<cmd>LspStop<CR><cmd>sleep 100m<CR><cmd>LspStart<CR>";
+      options = {
+        desc = "[L]sp [R]estart";
+      };
+    }
+
+    {
       mode = [ "n" ];
       key = "<leader>k";
       action = "<cmd>lua vim.lsp.buf.signature_help()<CR>";

@@ -5,6 +5,7 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./lsp
     ./plugins
+    ./general-keymaps.nix
   ];
 
   home.sessionVariables = {
