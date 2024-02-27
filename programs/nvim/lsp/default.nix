@@ -8,10 +8,11 @@
   };
 
   imports = [
-    ./fidget.nix
     ./inlayhints
+    ./fidget.nix
     ./lspsaga
     ./servers
+    ./rustaceanvim.nix
   ];
 
   programs.nixvim.keymaps = [
