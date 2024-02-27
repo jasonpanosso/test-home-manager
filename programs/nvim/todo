@@ -1,7 +1,5 @@
 vim.opts
 
-typescript-tools
-rustaceanvim
 roslyn
 harpoon
 

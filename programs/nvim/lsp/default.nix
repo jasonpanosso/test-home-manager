@@ -13,6 +13,7 @@
     ./lspsaga
     ./servers
     ./rustaceanvim.nix
+    ./typescript-tools.nix
   ];
 
   programs.nixvim.keymaps = [
