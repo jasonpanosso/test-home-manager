@@ -20,5 +20,6 @@
     ./sleuth.nix
     ./treesitter
     ./conform
+    ./harpoon
   ];
 }
