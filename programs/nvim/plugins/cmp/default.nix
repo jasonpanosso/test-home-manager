@@ -25,8 +25,9 @@
         enable_autosnippets = true;
         updateevents = "TextChanged,TextChangedI";
 
-        ext_opts = {
-          __raw = ''
+        ext_opts.__raw =
+          # lua
+          ''
             {
               [require('luasnip.util.types').choiceNode] = {
                 active = {
@@ -35,13 +36,12 @@
               },
             }
           '';
-        };
       };
     };
 
     keymaps = [
       {
-        mode = [ "i" "s" ];
+        mode = [ "i" "v" ];
         key = "<C-L>";
         action = "function() require('luasnip').jump(1) end";
         lua = true;
