@@ -6,7 +6,9 @@
       onAttach =
         #lua
         ''
-          function()
+          function(client, bufnr)
+            require('lsp-inlayhints').on_attach(client, bufnr)
+
             vim.keymap.set('n', '<Leader>rd', function()
               vim.cmd.RustLsp('debuggables')
             end, { buffer = bufnr, silent = true })
@@ -14,8 +16,6 @@
             vim.keymap.set('n', '<Leader>ca', function()
               vim.cmd.RustLsp('codeAction')
             end, { buffer = bufnr, silent = true })
-
-            -- require('lsp-inlayhints').on_attach(client, bufnr)
           end
         '';
 
