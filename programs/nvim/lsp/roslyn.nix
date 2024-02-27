@@ -20,7 +20,9 @@ in
         sdk_7_0
       ])
     ];
+
     extraPlugins = [ roslyn-nvim ];
+
     extraConfigLua =
       #lua
       ''
@@ -34,10 +36,7 @@ in
         })
 
         require("roslyn").setup({
-            -- cursed hack
-            on_attach = function()
-              vim.lsp.handlers["workspace/_roslyn_projectHasUnresolvedDependencies"] = function() end
-            end,
+            on_attach = function() end,
             capabilities = capabilities,
         })
       '';
