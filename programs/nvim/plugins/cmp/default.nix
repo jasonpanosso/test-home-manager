@@ -3,7 +3,6 @@
 {
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [
-      luasnip # TODO: refactor to load snippets like [this](https://git.sr.ht/~chiborg/nixvim-config/commit/dfc936d)
       cmp_luasnip
       cmp-nvim-lsp
       cmp-path
@@ -11,6 +10,34 @@
       nvim-cmp
       lspkind-nvim
     ];
+
+    plugins.friendly-snippets.enable = true;
+    plugins.luasnip = {
+      enable = true;
+
+      fromVscode = [
+        {
+          paths = ./snippets;
+        }
+      ];
+
+      extraConfig = {
+        enable_autosnippets = true;
+        updateevents = "TextChanged,TextChangedI";
+
+        ext_opts = {
+          __raw = ''
+            {
+              [require('luasnip.util.types').choiceNode] = {
+                active = {
+                  virt_text = { { '<- choiceNode', 'Comment' } },
+                },
+              },
+            }
+          '';
+        };
+      };
+    };
 
     keymaps = [
       {
@@ -23,9 +50,8 @@
           desc = "Next snippet";
         };
       }
-
     ];
 
-    extraConfigLua = builtins.readFile ./nvim-cmp.lua + builtins.readFile ./luasnip.lua;
+    extraConfigLua = builtins.readFile ./nvim-cmp.lua;
   };
 }
