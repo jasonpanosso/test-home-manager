@@ -16,5 +16,6 @@
     ./glow.nix
     ./autopairs.nix
     ./lint.nix
+    ./cmp
   ];
 }
