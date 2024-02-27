@@ -12,7 +12,6 @@
       nixGrammars = true;
     };
 
-    treesitter-context.enable = true;
     ts-autotag.enable = true;
     ts-context-commentstring = {
       enable = true;
