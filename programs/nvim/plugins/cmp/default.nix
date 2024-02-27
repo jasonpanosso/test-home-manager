@@ -16,7 +16,8 @@
       {
         mode = [ "i" "s" ];
         key = "<C-L>";
-        action = "<cmd>lua require('luasnip').jump(1)<CR>";
+        action = "function() require('luasnip').jump(1) end";
+        lua = true;
         options = {
           silent = true;
           desc = "Next snippet";

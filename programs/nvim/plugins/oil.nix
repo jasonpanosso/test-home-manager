@@ -5,7 +5,8 @@
         {
           mode = [ "n" "v" ];
           key = "<leader>pv";
-          action = "<cmd>lua require('oil').open_float()<CR>";
+          action = "require('oil').open_float";
+          lua = true;
           options = {
             silent = true;
             desc = "[P]roject [V]iew";

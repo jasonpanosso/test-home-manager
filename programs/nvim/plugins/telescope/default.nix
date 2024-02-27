@@ -124,7 +124,8 @@
       {
         mode = [ "n" ];
         key = "<leader>gr";
-        action = "<cmd>lua require('telescope.builtin').lsp_references()<CR>";
+        action = "require('telescope.builtin').lsp_references";
+        lua = true;
         options = {
           silent = true;
           desc = "[G]oto [R]eferences";
@@ -134,7 +135,8 @@
       {
         mode = [ "n" ];
         key = "<leader>gi";
-        action = "<cmd>lua require('telescope.builtin').lsp_implementations()<CR>";
+        action = "require('telescope.builtin').lsp_implementations";
+        lua = true;
         options = {
           silent = true;
           desc = "[G]oto [I]mplementations";
@@ -144,7 +146,8 @@
       {
         mode = [ "n" ];
         key = "<leader>db";
-        action = "<cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<CR>";
+        action = "function() require('telescope.builtin').diagnostics({bufnr=0}) end";
+        lua = true;
         options = {
           silent = true;
           desc = "[D]iagnostics [B]uffer";
@@ -154,7 +157,8 @@
       {
         mode = [ "n" ];
         key = "<leader>dw";
-        action = "<cmd>lua require('telescope.builtin').diagnostics()<CR>";
+        action = "require('telescope.builtin').diagnostics";
+        lua = true;
         options = {
           silent = true;
           desc = "[D]iagnostics [W]orkspace";
@@ -164,7 +168,8 @@
       {
         mode = [ "n" ];
         key = "<leader>ds";
-        action = "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>";
+        action = "require('telescope.builtin').lsp_document_symbols";
+        lua = true;
         options = {
           silent = true;
           desc = "[D]ocument [S]ymbols";
@@ -174,18 +179,19 @@
       {
         mode = [ "n" ];
         key = "<leader>ws";
-        action = "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>";
+        action = "require('telescope.builtin').lsp_dynamic_workspace_symbols";
+        lua = true;
         options = {
           silent = true;
           desc = "[W]orkspace [S]ymbols";
         };
       }
 
-
       {
         mode = [ "n" ];
         key = "<leader>ci";
-        action = "<cmd>lua require('telescope.builtin').lsp_incoming_calls()<CR>";
+        action = "require('telescope.builtin').lsp_incoming_calls";
+        lua = true;
         options = {
           silent = true;
           desc = "LSP: Incoming Calls";
@@ -195,7 +201,8 @@
       {
         mode = [ "n" ];
         key = "<leader>co";
-        action = "<cmd>lua require('telescope.builtin').lsp_outgoing_calls()<CR>";
+        action = "require('telescope.builtin').lsp_outgoing_calls";
+        lua = true;
         options = {
           silent = true;
           desc = "LSP: Outgoing Calls";

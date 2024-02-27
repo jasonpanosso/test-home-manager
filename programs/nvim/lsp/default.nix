@@ -31,7 +31,8 @@
     {
       mode = [ "n" ];
       key = "<leader>k";
-      action = "<cmd>lua vim.lsp.buf.signature_help()<CR>";
+      action = "vim.lsp.buf.signature_help";
+      lua = true;
       options = {
         silent = true;
         desc = "LSP: Signature Help";
