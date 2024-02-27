@@ -20,5 +20,6 @@
     ./telescope
     ./comment.nix
     ./sleuth.nix
+    ./treesitter
   ];
 }
