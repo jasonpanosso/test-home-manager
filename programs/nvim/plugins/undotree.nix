@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   programs.nixvim = {
     plugins.undotree = {
@@ -17,7 +15,5 @@
         };
       }
     ];
-
   };
-
 }

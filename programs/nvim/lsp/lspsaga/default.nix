@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   imports = [ ./keybinds.nix ];
   programs.nixvim.plugins.lspsaga = {

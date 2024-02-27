@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   imports = [ ./kanagawa.nix ];
 }

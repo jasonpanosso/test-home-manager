@@ -1,0 +1,15 @@
+vim.opts
+
+formatter
+fidget
+lsp servers
+typescript-tools
+rustaceanvim
+roslyn
+harpoon
+
+eventually:
+  actions-preview
+  dap
+  neotest
+  rest
