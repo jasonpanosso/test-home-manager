@@ -17,5 +17,6 @@
     ./autopairs.nix
     ./lint.nix
     ./cmp
+    ./telescope
   ];
 }
