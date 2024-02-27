@@ -19,5 +19,6 @@
     ./comment.nix
     ./sleuth.nix
     ./treesitter
+    ./conform
   ];
 }
