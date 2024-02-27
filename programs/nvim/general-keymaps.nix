@@ -1,11 +1,20 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = [ "n" "v" ];
       key = "H";
       action = "^";
       options = {
         desc = "Start of line";
+      };
+    }
+
+    {
+      mode = [ "n" "v" ];
+      key = "L";
+      action = "g_";
+      options = {
+        desc = "End of line";
       };
     }
 
@@ -36,15 +45,6 @@
       action = "<cmd>!chmod +x %<CR>";
       options = {
         desc = "!chmod [X]";
-      };
-    }
-
-    {
-      mode = [ "n" ];
-      key = "L";
-      action = "g_";
-      options = {
-        desc = "End of line";
       };
     }
 
