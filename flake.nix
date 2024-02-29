@@ -1,6 +1,5 @@
 {
   description = "Home Manager configuration of jason";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -19,6 +18,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system} // {
         overlays = [ neovim-nightly-overlay.overlay ];
+        config = { allowUnfree = true; };
       };
     in
     {

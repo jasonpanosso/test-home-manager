@@ -14,52 +14,45 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs;[
-    # archives
-    zip
-    xz
-    unzip
-    p7zip
-    gnutar
-
-    # utils
-    ripgrep
-    jq
-    yq-go
-    fzf
-    eza
-
-    # net tools
-    mtr
-    iperf3
-    dnsutils
-    ldns
-    nmap
-    ipcalc
-
-    # misc
-    file
-    which
-    tree
-    gnused
-    gnupg
-
-    # productivity
-    glow
-
-    # monitoring
-    strace # sys calls
-    ltrace # lib calls
-    lsof # list open files
     btop # htop/nmon
-    iotop # io
+    calibre
+    discord
+    dnsutils # `dig` command
+    docker-compose
+    ethtool # query/control network device driver & hw settings
+    eza # improved ls
+    fd # improved find
+    file # determines type of a file(human readable/mime)
+    fzf # fuzzy find
+    glow # md viewer
+    gnupg # privary guard
+    gnused # sed
+    gnutar # tar
     iftop # net
-
-    # system tools
-    sysstat
+    iotop # io
+    ipcalc # calculates broadcast/network/host range/etc from ip & netmask
+    iperf3 # network perf tool
+    jq
+    killall
+    ldns # dns lookup tool - `drill` command
     lm_sensors # for `sensors` command
-    ethtool
+    lsof # list open files
+    ltrace # lib calls
+    mtr # my traceroute (auto refreshing traceroute)
+    nmap # network mapper
+    p7zip # 7-zip port for unix
     pciutils # lspci
+    redshift # adaptive brightness
+    ripgrep
+    strace # sys calls
+    sysstat # sys perf monitoring tools
+    tree
+    unzip
     usbutils # lsusb
+    which
+    xz # xz compression
+    yq-go # jq for yaml
+    zip
 
     (nerdfonts.override {
       fonts = [
