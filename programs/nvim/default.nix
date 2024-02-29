@@ -9,6 +9,10 @@
     ./general-keymaps.nix
   ];
 
+  home.packages = with pkgs; [
+    ripgrep
+  ];
+
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
