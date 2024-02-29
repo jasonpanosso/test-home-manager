@@ -16,6 +16,7 @@ in
 {
   home.packages = with pkgs;
     [
+      moreutils # sponge for hacky resurrect fix
       tmux
       tmux-sessionizer
     ];
