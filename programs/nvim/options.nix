@@ -5,6 +5,8 @@ let
 in
 {
   programs.nixvim = {
+    luaLoader.enable = true;
+
     options = {
       number = true;
       relativenumber = true;
@@ -102,7 +104,7 @@ in
     };
 
     extraConfigLua =
-      # lua
+      /* lua */
       ''
         -- init cache directories
         local cache_dir = vim.fn.stdpath('cache') .. '/' .. 'nvim' .. '/'

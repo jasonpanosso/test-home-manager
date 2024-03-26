@@ -11,6 +11,7 @@
       beautysh
       djlint
       taplo
+      go
       (with dotnetCorePackages; combinePackages [
         sdk_6_0
         sdk_7_0
@@ -60,7 +61,7 @@
         mode = [ "n" "v" ];
         key = "<leader>lf";
         action =
-          # lua
+          /* lua */
           ''
             function()
               require("conform").format({ async = true, lsp_fallback = true })

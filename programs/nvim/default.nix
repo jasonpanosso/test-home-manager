@@ -21,7 +21,7 @@
   programs.nixvim = {
     enable = true;
     viAlias = true;
-    package = pkgs.neovim-nightly;
+    extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons ];
     globals.mapleader = " ";
   };
 }

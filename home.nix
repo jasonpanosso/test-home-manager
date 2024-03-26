@@ -3,7 +3,7 @@
 {
   imports = [
     ./programs/shell.nix
-    ./programs/tmux
+    ./programs/tmux.nix
     ./programs/kitty.nix
     ./programs/nvim
   ];
@@ -54,6 +54,15 @@
     yq-go # jq for yaml
     zip
 
+    (with dotnetCorePackages; combinePackages [
+      sdk_6_0
+      sdk_7_0
+      sdk_8_0
+      runtime_6_0
+      runtime_7_0
+      runtime_8_0
+    ])
+
     (nerdfonts.override {
       fonts = [
         "IosevkaTerm"
@@ -61,10 +70,6 @@
         "Iosevka"
       ];
     })
-
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   home.file = {
@@ -97,7 +102,6 @@
   };
 
   home.sessionVariables = {
-    DOTNET_ROOT = "/usr/lib/dotnet";
     WINEESYNC = 1;
     PATH = ''
       $HOME/.cargo/bin:\
