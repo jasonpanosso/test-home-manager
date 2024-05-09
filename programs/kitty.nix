@@ -35,7 +35,7 @@
       cursor_shape = "block";
     };
 
-    extraConfig = ''
+    extraConfig = /* sh */ ''
       mouse_map left click ungrabbed no-op
 
       # tmux clipboard bugfix
