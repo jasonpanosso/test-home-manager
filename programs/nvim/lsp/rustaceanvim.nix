@@ -23,25 +23,13 @@
           end
         '';
 
-      settings = /* lua */ ''
-        function(project_root)
-          local rust_analyzer_file = project_root .. "/rust-analyzer.json"
-
-          if vim.fn.filereadable(rust_analyzer_file) == 1 then
+      settings =
+        /* lua */
+        ''
+          function(project_root)
             return require('rustaceanvim.config.server').load_rust_analyzer_settings(project_root)
           end
-
-          return {
-            checkOnSave = true,
-            cargo = {
-              features = "all",
-            },
-            check = {
-              command = "clippy",
-            },
-          }
-        end
-      '';
+        '';
     };
   };
 }
