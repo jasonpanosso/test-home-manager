@@ -53,6 +53,9 @@
     xz # xz compression
     yq-go # jq for yaml
     zip
+    nodePackages_latest.npm
+    nodePackages_latest.pnpm
+    electron
 
     (with dotnetCorePackages; combinePackages [
       sdk_6_0
@@ -103,6 +106,7 @@
 
   home.sessionVariables = {
     WINEESYNC = 1;
+    DIRENV_LOG_FORMAT = "";
     PATH = ''
       $HOME/.cargo/bin:\
       $HOME/.local/bin:\
@@ -119,4 +123,12 @@
   };
 
   programs.home-manager.enable = true;
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+    config = {
+      global.hide_env_diff = true;
+    };
+  };
 }
